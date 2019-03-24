@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: lightskyblue; 
+}
+
+#cloudRight{
+  float:right;
+}
+
+#cloudLeft{
+  position: relative;
+}
+
+
+div {
+  position: relative;
+  top: -10px;
+  right: 330px;
+ 
+
+position:relative;
+animation:airplane 5s infinite;
+-webkit-animation:mymove 5s infinite; /*Safari and Chrome*/
+}
+
+@keyframes mymove
+{
+from {right:330px;}
+to {left: 600px;}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+from {right:330px;}
+to {left:600px;}
+  }
+}

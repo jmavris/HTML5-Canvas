@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 5 Canvas</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      
+div
+{
+animation:mymove 5s infinite;
+-webkit-animation:mymove 5s infinite; /*Safari and Chrome*/
+}
+
+@keyframes mymove
+{
+from {margin-left:100%}
+to {margin-right: 100%}
+}
+
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+from {margin-left:100%}
+to {margin-right: 100%}
+}
+</style>
+      
+  </head>
+  <body>
+    <canvas id="cloudRight" width="578" height="200"></canvas>
+     <canvas id="cloudLeft" width="578" height="200"></canvas>
+  
+    <script>
+      var canvas = document.getElementById('cloudLeft');
+      var context = canvas.getContext('2d');
+
+      // begin custom shape
+      context.beginPath();
+      context.moveTo(170, 80);
+      context.bezierCurveTo(130, 100, 130, 150, 230, 150);
+      context.bezierCurveTo(250, 180, 320, 180, 340, 150);
+      context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+      context.bezierCurveTo(430, 40, 370, 30, 340, 50);
+      context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+      context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+      // complete custom shape
+      context.closePath();
+      context.lineWidth = 5;
+      context.fillStyle = 'white';
+      context.strokeStyle = 'white';
+      context.stroke();
+      context.fill();
+      
+      //another cloud on the right
+      var canvas = document.getElementById('cloudRight');
+      var context = canvas.getContext('2d');
+
+      // begin custom shape
+      context.beginPath();
+      context.moveTo(170, 80);
+      context.bezierCurveTo(110, 102, 130, 150, 230, 150);
+      context.bezierCurveTo(250, 180, 320, 180, 340, 150);
+      context.bezierCurveTo(420, 150, 420, 120, 390, 100);
+      context.bezierCurveTo(430, 40, 370, 30, 340, 50);
+      context.bezierCurveTo(320, 5, 250, 20, 250, 50);
+      context.bezierCurveTo(200, 5, 150, 20, 170, 80);
+
+      // complete custom shape
+      context.closePath();
+      context.lineWidth = 5;
+      context.fillStyle = 'white';
+      context.strokeStyle = 'white';
+      context.stroke();
+      context.fill();
+    </script>
+   <div id ="airplane"><img src="airplane.png"/></div>
+  </body>
+</html>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  </body>
+</html>
